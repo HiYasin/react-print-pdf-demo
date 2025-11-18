@@ -4,7 +4,7 @@ Invoice PDF generation from given data.
 
 ## 📚 Libraries & Packages
 
-### Core Framework
+### Core
 - **[Next.js](https://nextjs.org/)** `v16.0.3`  
   React framework with server-side rendering and static site generation capabilities.
 
@@ -12,8 +12,7 @@ Invoice PDF generation from given data.
   JavaScript library for building user interfaces.
 
 - **[Tailwind CSS](https://tailwindcss.com/)** `v4`  
-  Utility-first CSS framework for rapid UI development.  
-  📖 [Documentation](https://tailwindcss.com/docs)
+  Utility-first CSS framework for rapid UI development.
 
 ### PDF Generation
 - **[@react-pdf/renderer](https://react-pdf.org/)** `v4.3.1`  
