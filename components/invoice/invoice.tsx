@@ -6,6 +6,7 @@ import {
     View,
     Document,
     Image,
+    PDFViewer,
 } from "@react-pdf/renderer";
 
 const PDFDownloadLink = dynamic(
@@ -21,6 +22,7 @@ import {
     invoiceMeta,
     recipient,
     subject,
+    footerInfo,
 } from "./data";
 
 import logo from '@/components/invoice/logo.png';
@@ -84,13 +86,27 @@ const InvoicePDF = () => (
             </Table>
 
             <Text style={styles.footerNote}>Thank you for your interest in Bobbin!</Text>
+            
+            <View style={styles.footer}>
+                <Text style={styles.footerText}>{footerInfo.address}</Text>
+                <Text style={styles.footerText}>Web: {footerInfo.websites.join(', ')}</Text>
+            </View>
         </Page>
     </Document>
 );
 
 export default function Invoice2() {
     return (
-        <div className="w-2xl mx-auto my-10">
+        <div className="w-3xl mx-auto my-10">
+
+            {/* View the pdf */}
+            <div className="w-full h-[500px]">
+                <PDFViewer width="100%" height="100%">
+                    <InvoicePDF />
+                </PDFViewer>
+            </div>
+
+            {/* Download function */}
             <div className="mt-6 flex justify-center">
                 <PDFDownloadLink document={<InvoicePDF />} fileName="invoice.pdf">
                     <button className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">

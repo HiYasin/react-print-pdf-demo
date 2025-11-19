@@ -55,3 +55,8 @@ export const totalData = [
     value: 800.00,
   },
 ];
+
+export const footerInfo = {
+  address: "13/52, 1st floor, B-block, Bipani Bitan-2, New Market, Chittagong, Bangladesh",
+  websites: ["bobbin.com.bd", "bobbinapparels.com"],
+};
